@@ -30,7 +30,7 @@ const SubjectsList = () => {
         accessorKey: 'code',
         size: 100,
         header: () => <p className="column-title ml-2">Code</p>,
-        cell: ({getValue}) => <Badge>{getValue<string>()}</Badge>
+        cell: ({ getValue }) => <Badge>{getValue<string>()}</Badge>
       },
       {
         id: 'name',
@@ -42,7 +42,7 @@ const SubjectsList = () => {
       },
       {
         id: 'department',
-        accessorKey: 'department',
+        accessorKey: 'department.name',
         size: 150,
         header: () => <p className="column-title">Department</p>,
         cell: ({ getValue }) => <Badge variant="secondary">{getValue<string>()}</Badge>
